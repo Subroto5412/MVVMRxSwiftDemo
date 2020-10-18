@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Subro Kumar",
+        "roll":"040512",
+        "session":"2005-2006",
+        "department":"Computer Engineeing"
+    },
+    {
+        "name": "Torun Biswas",
+        "roll":"041515",
+        "session":"2015-2016",
+        "department":"Computer Engineeing"
+    },
+    {
+        "name": "Korno Das",
+        "roll":"041016",
+        "session":"2010-2011",
+        "department":"Apply Pysics"
+    },
+    {
+        "name": "Prodip Kumar",
+        "roll":"040518",
+        "session":"2015-2016",
+        "department":"Computer Engineeing"
+    },
+    {
+        "name": "Sonil Kumar",
+        "roll":"040510",
+        "session":"2015-2016",
+        "department":"Civil Engineeing"
+    },
+    {
+        "name": "Arup Kumar Dev",
+        "roll":"040502",
+        "session":"2015-2016",
+        "department":"Computer Engineeing"
+    },
+    {
+        "name": "Suuj Kumar",
+        "roll":"040511",
+        "session":"2010-2011",
+        "department":"Computer Engineeing"
+    },
+    {
+        "name": "Sagor Kumar",
+        "roll":"040505",
+        "session":"2014-2015",
+        "department":"Electrical Engineeing"
+    },
+    {
+        "name": "Shekhor Kumar",
+        "roll":"040507",
+        "session":"2013-2014",
+        "department":"Computer Engineeing"
+    },
+    {
+        "name": "Shymol Kumar",
+        "roll":"040520",
+        "session":"2015-2016",
+        "department":"Computer Engineeing"
+    },
+    {
+        "name": "Tapos Kumar",
+        "roll":"040521",
+        "session":"2013-2014",
+        "department":"Electrical Engineeing"
+    },
+    {
+        "name": "Akash Kumar",
+        "roll":"040522",
+        "session":"2015-2016",
+        "department":"Electrical Engineeing"
+    }
+]
