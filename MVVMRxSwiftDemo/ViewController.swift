@@ -8,18 +8,22 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
     let disposeBag = DisposeBag()
-    
+   
+    var viewModel: StudentsListViewModel!
     override func viewDidLoad() {
         super.viewDidLoad()
-               
-        let service = StudentService()
-        service.fetchStudentData().subscribe(onNext: { students in
-            print(students)
-            }).disposed(by: disposeBag)
+        
+         self.viewModel = StudentsListViewModel()
+        viewModel.fetchStudentViewModel().bind(to: tableView.rx.items(cellIdentifier:"cell")) { index, viewModel, cell in
+            
+            cell.textLabel?.text = viewModel.displayText
+        }.disposed(by: disposeBag)
     }
 }
 

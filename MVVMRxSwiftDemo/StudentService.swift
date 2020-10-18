@@ -9,25 +9,28 @@
 import Foundation
 import RxSwift
 
-class StudentService{
-    
-    func fetchStudentData() -> Observable<[Student]>
-    {
+protocol StudentServiceProtocol {
+    func fetchStudents() -> Observable<[Student]>
+}
+   
+class StudentService: StudentServiceProtocol{
+    func fetchStudents() -> Observable<[Student]> {
         return Observable.create { observer ->Disposable in
-            
-            guard let path = Bundle.main.path(forResource: "student_info", ofType: "json") else{
-                observer.onError(NSError(domain: "", code: -1, userInfo: nil))
-                return Disposables.create {}
-            }
-            do{
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let  students = try JSONDecoder().decode([Student].self, from: data)
-                observer.onNext(students)
-            }
-            catch {
-                observer.onError(error)
-            }
-            return Disposables.create { }
-        }
+                   
+                   guard let path = Bundle.main.path(forResource: "student_info", ofType: "json") else{
+                       observer.onError(NSError(domain: "", code: -1, userInfo: nil))
+                       return Disposables.create {}
+                   }
+                   do{
+                       let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                       let  students = try JSONDecoder().decode([Student].self, from: data)
+                       observer.onNext(students)
+                   }
+                   catch {
+                       observer.onError(error)
+                   }
+                   return Disposables.create { }
+               }
     }
+    
 }
